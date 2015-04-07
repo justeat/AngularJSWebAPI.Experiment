@@ -1,0 +1,64 @@
+﻿.btn {
+    background: #fbfbfb;
+    border: 2px solid #D4D4D4;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.btn,
+.btn:hover,
+.btn:focus,
+button,
+button:hover,
+button:focus {
+    outline: none;
+}
+
+.btn a,
+.btn a:hover {
+    text-decoration: none;
+    color: #463333;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    background-color: #fac54a;
+    border: 2px solid #e2aa27;
+    color: #463333;
+    text-shadow: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    background-color: #D4D4D4;
+    border: 2px solid #D4D4D4;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    border-color: #cf8e22;
+}
+
+.btn-lg, .btn-group-lg>.btn {
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .btn .copy {
+    display: none;
+  }
+}

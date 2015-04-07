@@ -1,0 +1,134 @@
+﻿@font-face {
+    font-family: "Museo";
+    src: url("../../fonts/museo300-regular-webfont.eot"); /* IE9 Compat Modes */
+    src: url('../../fonts/museo300-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url("../../fonts/museo300-regular-webfont.woff") format("woff"), /* Modern Browsers */
+         url('../../fonts/museo300-regular-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+         url("../../fonts/museo300-regular-webfont.svg#museo300") format("svg"); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Museo 500";
+    src: url("../../fonts/museo500-regular-webfont.eot"); /* IE9 Compat Modes */
+    src: url('../../fonts/museo500-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url("../../fonts/museo500-regular-webfont.woff") format("woff"), /* Modern Browsers */
+         url('../../fonts/museo500-regular-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+         url("../../fonts/museo500-regular-webfont.svg#museo500") format("svg"); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    padding-top: 52px;
+    padding-bottom: 40px;
+    background-color: #FBFBFB;
+    font-family: 'Open Sans';
+}
+
+.modal-body {
+    margin: 0 auto;
+}
+
+.has-error .form-control {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.has-error .form-control:focus,
+.has-error .form-control:hover {
+  border-color: #843534;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.has-feedback .form-control-feedback {
+    top: 40px;
+}
+
+.top-container {
+    margin-top: 10px;
+}
+
+.has-feedback .form-control-feedback-no-label {
+    top: 14px;
+}
+
+/* see "CSS" section on this page for more details http://angular-ui.github.io/bootstrap/ */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.modal-header {
+background-color: #fac54a;
+}
+
+.modal-footer {
+background-color: #ffffff;    
+}
+
+.generating-label{
+    font-size: 12px;
+    font-weight: normal;
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+.generating-img{
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.pin-lab {
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.pin {
+    display: inline-block;
+    text-indent: 10px;
+    letter-spacing: 15px;
+    font-size: 18px;
+    line-height: 50px;
+    background-color: #f2f2f2;
+}
+
+.name {
+    font-size: 14px;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.preview-box{
+    padding: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid #CACACA;
+}
+
+.shadow {
+background: #E1E1E1;
+padding: 3px;
+margin: 10px 0;
+}
+
+.codebox-title {
+    height: 50px;
+    padding-left: 10px;
+    border-bottom: 1px solid #cacaca;
+    background-color: #ececec;
+}
+
+.codebox-title h4 {
+    padding-top: 10px;
+    margin-top: 1px;
+}
+
+.add-user-btn {
+    margin-top: 5px;
+    margin-right: 5px;
+}

@@ -1,0 +1,43 @@
+﻿<div class="container top-container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 table-body">
+            <div data-ng-if="data.showError" id="showError" class="alert alert-danger"><strong>An error has occurred.</strong></div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 table-body">
+            <div class="shadow">
+                <div class="codebox-title">
+                    <h4 class="pull-left">Users</h4>
+                    <button id="addUser" name="addUser" class="btn btn-primary pull-right add-user-btn" type="button" ng-click="addUser()">Add User</button>
+                </div>
+                <div class=" preview-box">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="user in users | orderBy:['displayName']">
+                                <td class="name">
+                                    <strong>{{user.displayName}}</strong>
+                                </td>
+                                <td class="actions">
+                                    <button class="btn btn-default" type="button" id="editUser" ng-click="editUser(user)">
+                                        <span class="glyphicon glyphicon glyphicon-edit"></span> <span class="copy">Edit</span>
+                                    </button>
+                                    <button class="btn btn-default" type="button" ng-click="deleteUser(user)">
+                                        <span class="glyphicon glyphicon-remove" id="deleteDriver"></span> <span class="copy">Delete</span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

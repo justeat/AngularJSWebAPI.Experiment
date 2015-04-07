@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="ie8" lang="en">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JUST EAT - Users</title>
+    <!-- bootstrap is included locally rather than by CDN so that it works Respond.js -->
+    <!-- see http://getbootstrap.com/getting-started/#support-ie8-respondjs -->
+    <link href="/Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="/Content/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/css/animate.min.css" rel="stylesheet">
+
+    @Styles.Render("~/Content/css/JustEat/justeat")
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="ng-app" data-ng-app="app">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/"><img src="/Content/images/JustEat/logo.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="container">
+        <div data-ng-view></div>
+    </div>
+    <script src="/Scripts/lodash.compat.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.1/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="/Scripts/restangular.min.js"></script>
+    @Scripts.Render("~/Scripts/app")
+</body>
+</html>

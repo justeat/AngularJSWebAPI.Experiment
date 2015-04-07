@@ -1,0 +1,40 @@
+﻿<div class="modal-header">
+    <button ng-click="cancel()" class="close" type="button">×</button>
+    <h4 data-ng-if="!isUserCreated" class="modal-title">Add User</h4>
+    <h4 data-ng-if="isUserCreated" class="modal-title">New User Added!</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div data-ng-if="data.showUsernameUniqueError" id="showUsernameUniqueError" class="alert alert-danger"><strong>Username is already in use</strong></div>
+            <div data-ng-if="data.showError" id="errorMessage" class="alert alert-danger"><strong>An error has occurred. Please contact customer service.</strong></div>
+        </div>
+    </div>
+    <form role="form" name="$parent.addUserForm" novalidate>
+        <ng-switch on="isUserCreated">
+            <div data-ng-switch-when="true" class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <p> <b>{{createUser.displayName}}</b> has been added</p>
+                </div>
+            </div>
+            <div data-ng-switch-default class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <label for="displayName">Username:</label>
+                    <div class="form-group has-feedback" ng-class="{'has-error': data.showNameRequiredError()}">
+                        <input type="text" class="form-control" id="displayName" name="displayName" ng-attr-placeholder="{{'Userame e.g. John Smith'}}" data-ng-model="addUserShadow.displayName" required autofocus>
+                        <i data-ng-if="data.showNameRequiredError()" id="nameRequiredError" class="fa fa-lg fa-exclamation-circle form-control-feedback form-control-feedback-no-label"
+                           data-tooltip="Required" data-tooltip-append-to-body="true"></i>
+                    </div>
+                </div>
+            </div>
+        </ng-switch>
+    </form>
+</div>
+<div class="modal-footer">
+    <button data-ng-if="isUserCreated" class="btn btn-default" ng-click="cancel()">Close</button>
+    <button data-ng-if="!isUserCreated" class="btn btn-default" ng-click="cancel()">Cancel</button>
+    <button data-ng-if="!isUserCreated" class="btn btn-primary" id="create" ng-click="add()" data-ng-disabled="addUserShadow.isInProgress" ng-switch="addUserShadow.isInProgress">
+        <span ng-switch-when="true">Add <i class="fa fa-spin fa-spinner"></i></span>
+        <span ng-switch-default>Add</span>
+    </button>
+</div>

@@ -1,0 +1,33 @@
+﻿.table thead tr th, 
+.table tbody tr th, 
+.table tfoot tr th, 
+.table thead tr td, 
+.table tbody tr td, 
+.table tfoot tr td{
+  font-size: 14px;
+  border-top: 0px solid #e6e6e6;
+  border-bottom: 1px solid #E5E5E5;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+  .table-body {
+    padding-left:0;
+    padding-right:0;
+  }
+}
+
+.table thead {
+  font-weight: 400;
+  color: #AC3029;
+  border-bottom: 3px solid #e5e5e5;
+}
+
+.table td:first-child {
+  font-weight: 300;
+}
+
+.table .actions {
+  text-align: right;
+  white-space: nowrap;
+}

@@ -1,0 +1,34 @@
+﻿<div class="modal-header">
+    <button ng-click="cancel()" class="close" type="button">×</button>
+    <h4 class="modal-title">Edit User</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div data-ng-if="data.showUsernameUniqueError" id="showUsernameUniqueError" class="alert alert-danger"><strong>Username is already in use</strong></div>
+            <div data-ng-if="data.showError" id="errorMessage" class="alert alert-danger"><strong>An error has occurred. Please contact customer service.</strong></div>
+        </div>
+    </div>
+    <form role="form" name="$parent.editUserForm" novalidate>
+        <ng-switch on="isUserEdited">
+            <div data-ng-switch-when="true" class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <p>Please make a note of this password and give it to <b>{{editedUser.displayName}}</b> so they can login!</p>
+                </div>
+            </div>
+            <div data-ng-switch-default class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <label for="displayName">Username:</label>
+                    <div class="form-group has-feedback" ng-class="{'has-error': data.showNameRequiredError()}">
+                        <input type="text" class="form-control" id="displayName" name="displayName" data-ng-model="shadow.displayName">
+                    </div>
+                </div>
+            </div>
+        </ng-switch>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" data-ng-if="isUserEdited" ng-click="cancel()">Close</button>
+    <button class="btn btn-default" data-ng-if="!isUserEdited" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary" data-ng-if="!isUserEdited" id="edit" ng-click="edit(editedUser)">Update</button>
+</div>
